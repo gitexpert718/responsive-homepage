@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>EventStory Home Page</title>
+		<meta name="description" content="A scrolling letters animation where some text changes depending on the page's scroll position" />
+		<meta name="keywords" content="scroll, letters, animation, javascript, web design, web development" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/demo3.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/header.css" /> -->
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+			box-sizing: border-box;
+			}
+
+			.row::after {
+			content: "";
+			clear: both;
+			display: table;
+			}
+
+			[class*="col-"] {
+			float: left;
+			padding: 5px;
+			}
+
+			html {
+			font-family: "Lucida Sans", sans-serif;
+			}
+
+			.header {
+			background-color: #9933cc;
+			color: #ffffff;
+			padding: 15px;
+			}
+
+			.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			}
+
+			.menu li {
+			padding: 8px;
+			margin-bottom: 7px;
+			background-color: #33b5e5;
+			color: #ffffff;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			}
+
+			.menu li:hover {
+			background-color: #0099cc;
+			}
+
+			.aside {
+			background-color: #33b5e5;
+			padding: 15px;
+			color: #ffffff;
+			text-align: center;
+			font-size: 14px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			}
+
+			.footer {
+			background-color: #0099cc;
+			color: #ffffff;
+			text-align: center;
+			font-size: 12px;
+			padding: 15px;
+			}
+
+			/* For mobile phones: */
+			[class*="col-"] {
+			width: 100%;
+			}
+
+			@media only screen and (min-width: 600px) {
+			/* For tablets: */
+			.col-s-1 {width: 8.33%;}
+			.col-s-2 {width: 16.66%;}
+			.col-s-3 {width: 25%;}
+			.col-s-4 {width: 33.33%;}
+			.col-s-5 {width: 41.66%;}
+			.col-s-6 {width: 100%;}
+			.col-s-7 {width: 58.33%;}
+			.col-s-8 {width: 66.66%;}
+			.col-s-9 {width: 75%;}
+			.col-s-10 {width: 83.33%;}
+			.col-s-11 {width: 91.66%;}
+			.col-s-12 {width: 100%;}
+			}
+			@media only screen and (min-width: 768px) {
+			/* For desktop: */
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+			}
+		</style>
+	</head>
+	<body class="demo-3 loading">
+		
+		<main>
+			<div class="content">
+				<p class="info">Faites defiler pour en savoir plus sur EventStory >></p>
+			</div>
+			<div class="content">
+				<div class="content__section" data-bgcolor="#6314e0">
+					<div class="content__main">
+						<!-- <div class="col-12 col-s-12"> -->
+							<span>pour que les photos de chacun</span>
+							<span>racontent l'histoire</span>
+							<span>d'un moment inoubliable</span>
+						<!-- </div> -->
+					</div>
+					<h2 class="content__title">#fonctionalités</h2>
+					<div class="border-svg">
+						<div  id="rasbtn"><img src="img/svg/collect.svg" alt="img"/><a href="#rassembler" style="color: white;">#rassembler</a></div>
+						<div  id="orgbtn"><img src="img/svg/organize.svg" alt="img"/><a href="#organiser" style="color: white;">#organiser</a></div>
+						<div  id="parbtn"><img src="img/svg/share.svg" alt="img"/><a href="#partager" style="color: white;">#partager</a></div>
+						<div  id="valbtn"><img src="img/svg/use.svg" alt="img"/><a href="#valoriser" style="color: white;">#valoriser</a></div>
+						<p>toutes les photos de votre evenement</p>
+					</div>				
+				</div>
+				
+				<div class="row content__section" data-bgcolor="#e34188" id="rassembler">					
+					<div class="col-6 col-s-6">
+						<a class="content__link"><img src="img/set3/bouquet_blur5_duotone-fff639-e34188_800x600.jpg" alt="img"/></a>
+					</div>
+					<h2 class="content__title" style="color:#fff639;">#rassembler&nbsp;</h2>	
+					<div class="col-6 col-s-12">
+						<span class="content__text" style="color:#fff639">Durant l'événement, les photos peuvent être synchronisées en continu depuis les mobiles pour créer une galerie commune à tous les participants : vos invités prennent des photos ou en sélectionnent parmi celles déjà enregistrées dans la pellicule de leur mobile et les partagent en un instant.<br>Les photos peuvent aussi être projetées en quasi-temps réel sur grand écran. Animation garantie grâce à ce photobooth décentralisé !
+						</span>	
+					</div>				  
+				</div>
+				<div class="row content__section" data-bgcolor="#aef164" id="organiser">					
+					<div class="col-6 col-s-6">
+				    <img class="content__img" src="img/set3/convention_blur5_duotone-500a9d-aef164_800x600.jpg" alt="img" width="600" height="600"> </div>
+					<h2 class="content__title" style="color:#500a9d">#organiser&nbsp;</h2>	
+					<div class="col-6 col-s-12">
+						<span class="content__text" style="color:#500a9d">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</span>	
+					</div>				  
+				</div>
+				<div class="row content__section" data-bgcolor="#19489c" id="partager">					
+					<div class="col-6 col-s-6">
+				    <img class="content__img" src="img/set3/party_blur15_duotone-19489c-fdba62_800x600.jpg" alt="img" width="800" height="600"> </div>
+					<h2 class="content__title"  style="color:#fdba62">#partager&nbsp;</h2>	
+					<div class="col-6 col-s-12">
+						<span class="content__text" style="color:#fdba62">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</span>	
+					</div>				  
+				</div>
+				<div class="row content__section" data-bgcolor="#07ccaf" id="valoriser">					
+					<div class="col-6 col-s-6">
+						<a class="content__link  content__link--nobottom"><img class="content__img" src="img/set3/hiking_blur10_duotone-ad3841-07ccaf_800x600.jpg"  alt="img"/></a>
+					</div>
+					<h2 class="content__title" style="color:#ad3841">#valoriser&nbsp;</h2>	
+					<div class="col-6 col-s-12">
+						<span class="content__text" style="color:#ad3841">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</span>	
+					</div>				  
+				</div>		
+			</div>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/demo3.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+		<script>
+			$('#rasbtn').click(function() {				
+				smoothScroll(document.getElementById('rassembler'));
+			});
+			$('#orgbtn').click(function() {				
+				smoothScroll(document.getElementById('organiser'));
+			});
+			$('#parbtn').click(function() {				
+				smoothScroll(document.getElementById('partager'));
+			});
+			$('#valbtn').click(function() {				
+				smoothScroll(document.getElementById('valoriser'));
+			});
+			window.smoothScroll = function(target) {
+				var scrollContainer = target;
+				do { //find scroll container
+					scrollContainer = scrollContainer.parentNode;
+					if (!scrollContainer) return;
+					scrollContainer.scrollTop += 1;
+				} while (scrollContainer.scrollTop == 0);
+				
+				var targetY = 0;
+				do { //find the top of target relatively to the container
+					if (target == scrollContainer) break;
+					targetY += target.offsetTop;
+				} while (target = target.offsetParent);
+				
+				scroll = function(c, a, b, i) {
+					i++; if (i > 25) return;
+					c.scrollTop = a + (b - a) / 30 * i;
+					setTimeout(function(){ scroll(c, a, b, i); }, 20);
+				}
+				// start scrolling
+				scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+			}
+		</script>
+	</body>
+</html>
